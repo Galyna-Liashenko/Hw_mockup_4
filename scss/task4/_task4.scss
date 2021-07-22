@@ -1,0 +1,39 @@
+.box_task4{
+   position: relative;
+    margin: 10px auto;
+    width: 300px;
+    height: 300px;
+
+    &__square{
+        position: absolute;
+        width: 100px;
+        height:100px;
+        background-color: $color1;
+        transform: translate(0%, 0%);
+        animation: square-motion 4s infinite; 
+    }
+}
+
+@keyframes square-motion {
+    0%{
+        transform: translate(0%,0%);
+        background-color: $color1;
+    }
+    25%{
+        transform: translate(0%,200%);
+        background-color: $color2;
+    }
+    50%{
+        transform: translate(200%,200%);
+        background-color: $color3;
+        }
+    75%{
+        transform: translate(200%,0%);
+        background-color: $color4;
+    }
+    100%{
+        transform: translate(0%,0%);
+        background-color: $color1;
+    }
+}
+

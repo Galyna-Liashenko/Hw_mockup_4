@@ -1,0 +1,70 @@
+.box_task3{
+    position: relative;
+    margin: 10px auto;
+    width: 700px;
+    height: 400px;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    &__menu{
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        background-color:$bg-menu;
+        transform: translate(-85%);
+        transition: 0.2s linear;
+
+        ul{position: absolute;
+            margin-top: 40px;
+           list-style: none;
+           padding-left: 30px;
+
+            li{position: relative;
+               margin-bottom: 15px;
+               
+                a{
+                text-decoration: none;
+                color: $text-color;
+                } 
+              
+            a:before{
+                content: ' ';
+                display: inline-block;
+                width: 11px;
+                height: 11px;
+                transform: rotate(45deg);
+                background: radial-gradient( circle closest-side, $color1-li 50%,$color1-li 50%, $color2-li 100%, $color2-li 100%);
+                margin-right: 10px;
+                }
+            a:hover{
+                    color: $color1-li;
+                    transition: .2s linear;
+                } 
+           }
+        }
+        .menu-here{
+            position: absolute;
+            overflow: hidden;
+            width: 400px;
+            height: 20px;
+            margin: 0;
+            transform: translate(-10px, 170px) rotate(-270deg);
+            text-align: center;
+            p{
+                margin-top: 0;
+                padding-top: 5px;
+                color: $text-color;
+            }
+        }
+    }
+    
+    &__menu:hover{
+        transform: translate(-5%);
+        transition: 0.5s linear;
+        
+        .menu-here{
+            visibility: hidden;
+            transition: 0.3s linear;
+        }
+    }
+}
